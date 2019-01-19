@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :redirect_if_not, only: [:new, :create, :show]
+  skip_before_action :redirect_if_not, only: [:new, :create]
 
   def new
     @user = User.new
