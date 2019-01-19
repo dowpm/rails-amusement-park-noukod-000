@@ -6,16 +6,12 @@ class ApplicationController < ActionController::Base
   # before_action :is_loging?, only: :home
 
   def home
-    # puts 'home action is called----->'
     # binding.pry
   end
 
   def is_loging?
-    puts 'is_loging? is called =======+++'
     !!current_user
     # binding.pry
-    puts @current_user
-    !!current_user
   end
 
   private
@@ -25,7 +21,6 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_if_not
-    puts 'redirect_if_not is called ++++++++++'
     redirect_to root_path unless is_loging?
   end
 end
