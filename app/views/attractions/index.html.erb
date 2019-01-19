@@ -1,0 +1,24 @@
+<h1>Listing attractions</h1>
+<table class="table">
+  <tbody>
+    <tr>
+      <td ><strong>Name</strong></td>
+      <td ><strong>Tickets</strong></td>
+      <td><strong>Details</strong></td>
+    </tr>
+
+    <% @attractions.each do |attraction|%>
+    <tr>
+      <td><%= attraction.name %></td>
+      <td><%= attraction.tickets %></td>
+      <td>
+        <%= link_to "Show #{attraction.name}", attraction_path(attraction) if @current_user.admin%>
+        <%= link_to "Go on #{attraction.name}", attraction_path(attraction) unless @current_user.admin %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "Back to profile", user_path(@current_user), {:class => "btn btn-primary"} %></p>
+<p><%= link_to "New Attraction", new_attraction_path if @current_user.admin%></p>
