@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :redirect_if_not, only: :signin
+  skip_before_action :redirect_if_not, only: :create
 
   def signin
   end
