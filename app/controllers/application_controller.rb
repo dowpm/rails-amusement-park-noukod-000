@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :is_loging? #that's mean I can call it in any views
   before_action :redirect_if_not, except: [:home]
-  # before_action :is_loging?, only: :home
+  before_action :is_loging?, only: :home
 
   def home
     # binding.pry
