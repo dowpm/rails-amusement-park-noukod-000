@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     puts 'is_loging? is called =======+++'
     !!current_user
     # binding.pry
-    @current_user
+    puts @current_user
   end
 
   private
