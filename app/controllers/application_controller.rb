@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  
+
   helper_method :is_loging? #that's mean I can call it in any views
   before_action :redirect_if_not, except: [:home]
   # before_action :is_loging?, only: :home
