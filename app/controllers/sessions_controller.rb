@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
-  skip_before_action :redirect_if_not, only: :create
+  skip_before_action :redirect_if_not
 
   def signin
+    redirect_to user_path session[:user_id] if is_loging?
   end
 
   def create
