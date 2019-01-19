@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :redirect_if_not
-
+ 
   def signin
   end
 
@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
     # binding.pry
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
-      redirect_to user_path(@user)
+      # redirect_to user_path(@user)
+      redirect_to root_path
     else
       redirect_to signin_session_path
     end
