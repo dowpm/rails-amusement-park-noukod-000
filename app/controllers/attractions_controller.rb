@@ -1,4 +1,5 @@
 class AttractionsController < ApplicationController
+  skip_before_action :redirect_if_not
   before_action :set_attraction, only: [:show, :edit, :update, :destroy]
   def index
     @attractions = Attraction.all
