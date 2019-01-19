@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   # before_action :is_loging?, only: :home
 
   def home
-    puts 'home action is called----->'
+    # puts 'home action is called----->'
     # binding.pry
   end
 
