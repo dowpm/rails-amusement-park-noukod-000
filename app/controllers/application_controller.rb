@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :is_loging?
   before_action :redirect_if_not, except: [:home]
-  before_action :is_loging?, only: :home
+  # before_action :is_loging?, only: :home
 
   def home
     puts 'home action is called----->'
