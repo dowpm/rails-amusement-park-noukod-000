@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     !!current_user
     # binding.pry
     puts @current_user
+    !!current_user
   end
 
   private
