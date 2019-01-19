@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_if_not
+    puts 'redirect_if_not is called ++++++++++'
     redirect_to root_path unless is_loging?
   end
 end
