@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def is_loging?
+    puts 'is_loging? is called =======+++'
     !!current_user
     # binding.pry
   end
